@@ -1,0 +1,60 @@
+Tests for testing the app docs:
+
+1/Create Asset:
+
+Create the following asset, The query It will return all the assets therein
+  "assetID": "A014",
+  "assetName": "Machine 1",
+  "assetType": "Machine",
+  "location": "Factory B",
+  "purchaseDate": {
+    "$date": "2023-02-01T18:30:00Z"
+  },
+  "initialCost": 63153,
+  "operationalStatus": "Under Maintenance"
+
+Now here copy the "_id" attribute of asset with assetID "A005"
+
+2/find Asset: 
+use this "_id" to find the asset 5 using find-asset-by-id
+
+3/update Asset: Use the "_id" of asset with assetID "A005" and update it as:
+
+    "assetID": "A005",
+  "assetName": "Machine 5",
+  "assetType": "Machine",
+  "location": "Factory T",
+  "purchaseDate": {
+    "$date": "2023-02-01T18:30:00Z"
+  },
+  "initialCost": 63153,
+  "operationalStatus": "Under Maintenance"
+
+4/Delete asset: delete asset 5 using its "_id" as used above
+
+5/create metric: create the following metric, you will see all the metrics in response
+ "assetID": "A014",
+  "uptime": 75.67,
+  "downtime": 0.81,
+  "maintenanceCosts": 495,
+  "failureRate": 0.0101,
+  "efficiency": 23.58
+
+Now copy the "_id" attribute of metric with assetID "A004"
+
+6/find metric: find the metric of A004 using the above "_id"
+
+7/update metric: update metric of A004 with below metric:
+    "assetID": "A004",
+  "uptime": 75.67,
+  "downtime": 0.91,
+  "maintenanceCosts": 1005,
+  "failureRate": 0.0101,
+  "efficiency": 24.58
+
+8/delete metric: delete the metric of A004  using its "_id"
+
+Rest All the data insight functionalities like average downtime, costs and least reliable assets can be tested be tested rightaway
+
+
+
